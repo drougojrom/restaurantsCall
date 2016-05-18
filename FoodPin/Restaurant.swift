@@ -20,6 +20,7 @@ class Restaurant {
     
         self.name = name
         self.type = type
+        self.location = location
         self.image = image
         self.isVisited = isVisited
         
