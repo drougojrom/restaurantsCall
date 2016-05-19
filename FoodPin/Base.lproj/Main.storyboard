@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u4o-bz-rhN" id="6ro-kM-0GR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xR0-Ec-Wr6">
@@ -99,13 +99,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GS-pe-l95">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GS-pe-l95">
                                 <rect key="frame" x="0.0" y="105" width="600" height="119"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q2c-61-zRe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q2c-61-zRe">
                                 <rect key="frame" x="0.0" y="372" width="600" height="228"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="0sL-H8-UQ7"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="dCi-eR-1dG" customClass="RestaurantDetailTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="36"/>
@@ -121,17 +124,17 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYW-Sh-bm5">
-                                                    <rect key="frame" x="316" y="8" width="42" height="21"/>
+                                                    <rect key="frame" x="417" y="7" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Mmm-gL-ol1" firstAttribute="leading" secondItem="D4J-A4-qw3" secondAttribute="leadingMargin" constant="5" id="DBK-nq-8BN"/>
-                                                <constraint firstItem="jYW-Sh-bm5" firstAttribute="top" secondItem="D4J-A4-qw3" secondAttribute="topMargin" id="OXW-Is-Za7"/>
-                                                <constraint firstAttribute="trailing" secondItem="jYW-Sh-bm5" secondAttribute="trailing" constant="242" id="Sg5-sm-416"/>
-                                                <constraint firstItem="Mmm-gL-ol1" firstAttribute="centerY" secondItem="D4J-A4-qw3" secondAttribute="centerY" id="xsF-Sr-gg0"/>
+                                                <constraint firstItem="jYW-Sh-bm5" firstAttribute="baseline" secondItem="Mmm-gL-ol1" secondAttribute="baseline" id="0wA-Jk-vd1"/>
+                                                <constraint firstAttribute="trailing" secondItem="jYW-Sh-bm5" secondAttribute="trailing" constant="141" id="Zhx-mj-SsM"/>
+                                                <constraint firstItem="Mmm-gL-ol1" firstAttribute="leading" secondItem="D4J-A4-qw3" secondAttribute="leadingMargin" constant="5" id="rYm-qN-5o4"/>
+                                                <constraint firstItem="Mmm-gL-ol1" firstAttribute="centerY" secondItem="D4J-A4-qw3" secondAttribute="centerY" id="sUV-Rh-yQ6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -145,14 +148,28 @@
                                     <outlet property="delegate" destination="ex5-R7-c4B" id="JXd-27-0pg"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmj-eJ-piz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmj-eJ-piz">
                                 <rect key="frame" x="0.0" y="64" width="600" height="300"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jmj-eJ-piz" firstAttribute="trailing" secondItem="0GS-pe-l95" secondAttribute="trailing" id="57c-du-l40"/>
+                            <constraint firstItem="Q2c-61-zRe" firstAttribute="top" secondItem="jmj-eJ-piz" secondAttribute="bottom" constant="8" symbolic="YES" id="Feq-Du-tSM"/>
+                            <constraint firstAttribute="bottom" secondItem="0GS-pe-l95" secondAttribute="bottom" constant="376" id="KnR-AH-whX"/>
+                            <constraint firstItem="Q2c-61-zRe" firstAttribute="trailing" secondItem="0GS-pe-l95" secondAttribute="trailing" id="VFx-4v-l3T"/>
+                            <constraint firstItem="Q2c-61-zRe" firstAttribute="leading" secondItem="0GS-pe-l95" secondAttribute="leading" id="f34-v3-FRs"/>
+                            <constraint firstItem="0GS-pe-l95" firstAttribute="top" secondItem="2wt-hd-pn9" secondAttribute="bottom" constant="41" id="kan-Kr-X6y"/>
+                            <constraint firstItem="jmj-eJ-piz" firstAttribute="leading" secondItem="Uo0-Cq-oKg" secondAttribute="leading" id="rIY-9S-VvI"/>
+                            <constraint firstItem="jmj-eJ-piz" firstAttribute="top" secondItem="2wt-hd-pn9" secondAttribute="bottom" id="rox-Tj-jWG"/>
+                            <constraint firstAttribute="trailing" secondItem="jmj-eJ-piz" secondAttribute="trailing" id="tOG-F6-IbQ"/>
+                            <constraint firstItem="Q2c-61-zRe" firstAttribute="bottom" secondItem="xks-Xv-gAN" secondAttribute="top" id="xJA-fC-FQQ"/>
+                            <constraint firstItem="jmj-eJ-piz" firstAttribute="leading" secondItem="0GS-pe-l95" secondAttribute="leading" id="xXl-C0-yzV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="restaurantImageView" destination="jmj-eJ-piz" id="aV3-3H-EHD"/>
+                        <outlet property="tableView" destination="Q2c-61-zRe" id="Wd1-w1-RjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozo-OU-WAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
