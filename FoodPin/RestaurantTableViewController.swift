@@ -13,25 +13,25 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - instance variables
     
     var restaurants: [Restaurant] = [
-        Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", image: "cafedeadend.jpg", isVisited: false),
-        Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", image: "homei.jpg", isVisited: false),
-        Restaurant(name: "Teakha", type: "Tea House", location: "Hong Kong", image: "teakha.jpg", isVisited: false),
-        Restaurant(name: "Cafe Loisl", type: "Austrian / Causual Drink", location: "Hong Kong", image: "cafeloisl.jpg", isVisited: false),
-        Restaurant(name: "Petite Oyster", type: "French", location: "Hong Kong", image: "petiteoyster.jpg", isVisited: false),
-        Restaurant(name: "For Kee Restaurant", type: "Cafe", location: "Hong Kong", image: "forkeerestaurant.jpg", isVisited: false),
-        Restaurant(name: "Posatelier", type: "Bakery", location: "Hong Kong", image: "posatelier.jpg", isVisited: false),
-        Restaurant(name: "Bourke Street Bakery", type: "Bakery", location: "Sydney", image: "bourkestreetbakery.jpg", isVisited: false),
-        Restaurant(name: "Haighs Chocolate", type: "Chocolate", location: "Sydney", image: "haighschocolate.jpg", isVisited: false),
-        Restaurant(name: "Palomino Espresso", type: "Cafe", location: "Sydney", image: "palominoespresso.jpg", isVisited: false),
-        Restaurant(name: "Upstate", type: "American / Seafood", location: "New York", image: "upstate.jpg", isVisited: false),
-        Restaurant(name: "Traif", type: "American", location: "New York", image: "traif.jpg", isVisited: false),
-        Restaurant(name: "Waffle Wolf", type: "American", location: "New York", image: "wafflewolf.jpg", isVisited: false),
-        Restaurant(name: "Five leaves", type: "American", location:  "New York", image: "fiveleaves.jpg", isVisited: false),
-        Restaurant(name: "Cafe Lore", type: "Breakfast & Brunch", location: "New York", image: "cafelore.jpg", isVisited: false),
-        Restaurant(name: "Donostia", type: "British", location: "London", image: "donostia.jpg", isVisited: false),
-        Restaurant(name: "Confessional", type: "Spanish", location: "London", image: "confessional.jpg", isVisited: false),
-        Restaurant(name: "Barrafina", type: "British", location: "London", image: "barrafina.jpg", isVisited: false),
-        Restaurant(name: "Royal Oak", type: "Thai", location: "London", image: "royaloak.jpg", isVisited: false)
+        Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", telephoneNumber: "123829139", image: "cafedeadend.jpg", isVisited: false),
+        Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", telephoneNumber: "123829139", image: "homei.jpg", isVisited: false),
+        Restaurant(name: "Teakha", type: "Tea House", location: "Hong Kong", telephoneNumber: "123829139", image: "teakha.jpg", isVisited: false),
+        Restaurant(name: "Cafe Loisl", type: "Austrian / Causual Drink", location: "Hong Kong", telephoneNumber: "123829139", image: "cafeloisl.jpg", isVisited: false),
+        Restaurant(name: "Petite Oyster", type: "French", location: "Hong Kong", telephoneNumber: "123829139", image: "petiteoyster.jpg", isVisited: false),
+        Restaurant(name: "For Kee Restaurant", type: "Cafe", location: "Hong Kong", telephoneNumber: "123829139", image: "forkeerestaurant.jpg", isVisited: false),
+        Restaurant(name: "Posatelier", type: "Bakery", location: "Hong Kong", telephoneNumber: "123829139", image: "posatelier.jpg", isVisited: false),
+        Restaurant(name: "Bourke Street Bakery", type: "Bakery", location: "Sydney", telephoneNumber: "123829139", image: "bourkestreetbakery.jpg", isVisited: false),
+        Restaurant(name: "Haighs Chocolate", type: "Chocolate", location: "Sydney", telephoneNumber: "123829139", image: "haighschocolate.jpg", isVisited: false),
+        Restaurant(name: "Palomino Espresso", type: "Cafe", location: "Sydney", telephoneNumber: "123829139", image: "palominoespresso.jpg", isVisited: false),
+        Restaurant(name: "Upstate", type: "American / Seafood", location: "New York", telephoneNumber: "123829139", image: "upstate.jpg", isVisited: false),
+        Restaurant(name: "Traif", type: "American", location: "New York", telephoneNumber: "123829139", image: "traif.jpg", isVisited: false),
+        Restaurant(name: "Waffle Wolf", type: "American", location: "New York", telephoneNumber: "123829139", image: "wafflewolf.jpg", isVisited: false),
+        Restaurant(name: "Five leaves", type: "American", location:  "New York", telephoneNumber: "123829139", image: "fiveleaves.jpg", isVisited: false),
+        Restaurant(name: "Cafe Lore", type: "Breakfast & Brunch", location: "New York", telephoneNumber: "123829139", image: "cafelore.jpg", isVisited: false),
+        Restaurant(name: "Donostia", type: "British", location: "London", telephoneNumber: "123829139", image: "donostia.jpg", isVisited: false),
+        Restaurant(name: "Confessional", type: "Spanish", location: "London", telephoneNumber: "123829139", image: "confessional.jpg", isVisited: false),
+        Restaurant(name: "Barrafina", type: "British", location: "London", telephoneNumber: "123829139", image: "barrafina.jpg", isVisited: false),
+        Restaurant(name: "Royal Oak", type: "Thai", location: "London", telephoneNumber: "123829139", image: "royaloak.jpg", isVisited: false)
     
     ]
     
@@ -41,16 +41,18 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
 
     // MARK: - Table view data source
