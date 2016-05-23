@@ -13,25 +13,25 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - instance variables
     
     var restaurants: [Restaurant] = [
-        Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", telephoneNumber: "123829139", image: "cafedeadend.jpg", isVisited: false),
-        Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", telephoneNumber: "123829139", image: "homei.jpg", isVisited: false),
-        Restaurant(name: "Teakha", type: "Tea House", location: "Hong Kong", telephoneNumber: "123829139", image: "teakha.jpg", isVisited: false),
-        Restaurant(name: "Cafe Loisl", type: "Austrian / Causual Drink", location: "Hong Kong", telephoneNumber: "123829139", image: "cafeloisl.jpg", isVisited: false),
-        Restaurant(name: "Petite Oyster", type: "French", location: "Hong Kong", telephoneNumber: "123829139", image: "petiteoyster.jpg", isVisited: false),
-        Restaurant(name: "For Kee Restaurant", type: "Cafe", location: "Hong Kong", telephoneNumber: "123829139", image: "forkeerestaurant.jpg", isVisited: false),
-        Restaurant(name: "Posatelier", type: "Bakery", location: "Hong Kong", telephoneNumber: "123829139", image: "posatelier.jpg", isVisited: false),
-        Restaurant(name: "Bourke Street Bakery", type: "Bakery", location: "Sydney", telephoneNumber: "123829139", image: "bourkestreetbakery.jpg", isVisited: false),
-        Restaurant(name: "Haighs Chocolate", type: "Chocolate", location: "Sydney", telephoneNumber: "123829139", image: "haighschocolate.jpg", isVisited: false),
-        Restaurant(name: "Palomino Espresso", type: "Cafe", location: "Sydney", telephoneNumber: "123829139", image: "palominoespresso.jpg", isVisited: false),
-        Restaurant(name: "Upstate", type: "American / Seafood", location: "New York", telephoneNumber: "123829139", image: "upstate.jpg", isVisited: false),
-        Restaurant(name: "Traif", type: "American", location: "New York", telephoneNumber: "123829139", image: "traif.jpg", isVisited: false),
-        Restaurant(name: "Waffle Wolf", type: "American", location: "New York", telephoneNumber: "123829139", image: "wafflewolf.jpg", isVisited: false),
-        Restaurant(name: "Five leaves", type: "American", location:  "New York", telephoneNumber: "123829139", image: "fiveleaves.jpg", isVisited: false),
-        Restaurant(name: "Cafe Lore", type: "Breakfast & Brunch", location: "New York", telephoneNumber: "123829139", image: "cafelore.jpg", isVisited: false),
-        Restaurant(name: "Donostia", type: "British", location: "London", telephoneNumber: "123829139", image: "donostia.jpg", isVisited: false),
-        Restaurant(name: "Confessional", type: "Spanish", location: "London", telephoneNumber: "123829139", image: "confessional.jpg", isVisited: false),
-        Restaurant(name: "Barrafina", type: "British", location: "London", telephoneNumber: "123829139", image: "barrafina.jpg", isVisited: false),
-        Restaurant(name: "Royal Oak", type: "Thai", location: "London", telephoneNumber: "123829139", image: "royaloak.jpg", isVisited: false)
+        Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "G/F, 72 Po Hing Fong, Sheung Wan, Hong Kong", telephoneNumber: "123829139", image: "cafedeadend.jpg", isVisited: false),
+        Restaurant(name: "Homei", type: "Cafe", location: "Shop B, G/F, 22-24A Tai Ping San Street SOHO, Sheung Wan, Hong Kong", telephoneNumber: "123829139", image: "homei.jpg", isVisited: false),
+        Restaurant(name: "Teakha", type: "Tea House", location: "Shop B, 18 Tai Ping Shan Road SOHO, Sheung Wan, Hong Kong", telephoneNumber: "123829139", image: "teakha.jpg", isVisited: false),
+        Restaurant(name: "Cafe Loisl", type: "Austrian / Causual Drink", location: "Shop B, 20 Tai Ping Shan Road SOHO, Sheung Wan, Hong Kong", telephoneNumber: "123829139", image: "cafeloisl.jpg", isVisited: false),
+        Restaurant(name: "Petite Oyster", type: "French", location: "24 Tai Ping Shan Road SOHO, Sheung Wan, Hong Kong", telephoneNumber: "123829139", image: "petiteoyster.jpg", isVisited: false),
+        Restaurant(name: "For Kee Restaurant", type: "Cafe", location: "Shop J-K., 200 Hollywood Road, SOHO, Sheung Wan, Hong Kong", telephoneNumber: "123829139", image: "forkeerestaurant.jpg", isVisited: false),
+        Restaurant(name: "Po's Atelier", type: "Bakery", location: "G/F, 62 Po Hing Fong, Sheung Wan, Hong Kong", telephoneNumber: "123829139", image: "posatelier.jpg", isVisited: false),
+        Restaurant(name: "Bourke Street Bakery", type: "Bakery", location: "633 Bourke St Sydney New South Wales 2010 Surry Hills", telephoneNumber: "123829139", image: "bourkestreetbakery.jpg", isVisited: false),
+        Restaurant(name: "Haighs Chocolate", type: "Chocolate", location: "412-414 George St Sydney New South Wales", telephoneNumber: "123829139", image: "haighschocolate.jpg", isVisited: false),
+        Restaurant(name: "Palomino Espresso", type: "Cafe", location: "Shop 1 61 York St Sydney New South Wales", telephoneNumber: "123829139", image: "palominoespresso.jpg", isVisited: false),
+        Restaurant(name: "Upstate", type: "American / Seafood", location: "95 1st Ave New York, NY 10003", telephoneNumber: "123829139", image: "upstate.jpg", isVisited: false),
+        Restaurant(name: "Traif", type: "American", location: "229 S 4th St Brooklyn, NY 11211", telephoneNumber: "123829139", image: "traif.jpg", isVisited: false),
+        Restaurant(name: "Waffle Wolf", type: "American", location: "445 Graham Ave Brooklyn, NY 11211", telephoneNumber: "123829139", image: "wafflewolf.jpg", isVisited: false),
+        Restaurant(name: "Five leaves", type: "American", location:  "413 Graham Ave Brooklyn, NY 11211", telephoneNumber: "123829139", image: "fiveleaves.jpg", isVisited: false),
+        Restaurant(name: "Cafe Lore", type: "Breakfast & Brunch", location: "Sunset Park 4601 4th Ave Brooklyn, NY 11220", telephoneNumber: "123829139", image: "cafelore.jpg", isVisited: false),
+        Restaurant(name: "Donostia", type: "British", location: "10 Seymour Place London W1H 7ND United Kingdom", telephoneNumber: "123829139", image: "donostia.jpg", isVisited: false),
+        Restaurant(name: "Confessional", type: "Spanish", location: "308 E 6th St New York, NY 10003", telephoneNumber: "123829139", image: "confessional.jpg", isVisited: false),
+        Restaurant(name: "Barrafina", type: "British", location: "54 Frith Street London W1D 4SL United Kingdom", telephoneNumber: "123829139", image: "barrafina.jpg", isVisited: false),
+        Restaurant(name: "Royal Oak", type: "Thai", location: "2 Regency Street London SW1P 4BZ United Kingdom", telephoneNumber: "123829139", image: "royaloak.jpg", isVisited: false)
     
     ]
     
